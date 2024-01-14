@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0a2 (Python 3.12.1 on win32)" generated="2024-01-14T18:02:04.688487" rpa="false" schemaversion="5">
+<suite id="s1" name="Office" source="C:\devolpment\robot-scripts\Playground front office\tests\office.robot">
+<test id="s1-t1" name="Navigeer Naar Contact Pagina" line="22">
+<kw name="Ga Naar De Website" owner="common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER-GC}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg time="2024-01-14T18:02:05.183058" level="INFO">Opening browser 'gc' to base url 'https://automationplayground.com/front-office/'.</msg>
+<status status="PASS" start="2024-01-14T18:02:05.183058" elapsed="5.253289"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-14T18:02:10.436347" elapsed="0.180058"/>
+</kw>
+<status status="PASS" start="2024-01-14T18:02:05.183058" elapsed="5.434594"/>
+</kw>
+<kw name="Navigeer Naar Contact Pagina" owner="contact_page">
+<tag>Contact Pagina Openen</tag>
+<doc>Navigeer naar contact pagina</doc>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>contact</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-01-14T18:02:10.618525" elapsed="0.344415"/>
+</kw>
+<kw name="Should Be String" owner="String">
+<arg>Psst. Learn how I make over 6-figures of passive income per year at</arg>
+<doc>Fails if the given ``item`` is not a string.</doc>
+<status status="PASS" start="2024-01-14T18:02:10.962940" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg time="2024-01-14T18:02:12.963180" level="INFO">Slept 2 seconds.</msg>
+<status status="PASS" start="2024-01-14T18:02:10.962940" elapsed="2.000240"/>
+</kw>
+<status status="PASS" start="2024-01-14T18:02:10.618525" elapsed="2.344655"/>
+</kw>
+<kw name="Vul Contact Formulier in" owner="contact_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=name</arg>
+<arg>${Naam}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg time="2024-01-14T18:02:12.963180" level="INFO">Typing text 'Mehmet' into text field 'id=name'.</msg>
+<status status="PASS" start="2024-01-14T18:02:12.963180" elapsed="0.223826"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=email</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg time="2024-01-14T18:02:13.188430" level="INFO">Typing text 'Mehmet@mehmet.nl' into text field 'id=email'.</msg>
+<status status="PASS" start="2024-01-14T18:02:13.187006" elapsed="0.207289"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=phone</arg>
+<arg>${Telefoon}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg time="2024-01-14T18:02:13.395262" level="INFO">Typing text 'mmmm06123456789' into text field 'id=phone'.</msg>
+<status status="PASS" start="2024-01-14T18:02:13.394295" elapsed="0.247171"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=message</arg>
+<arg>${Bericht}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg time="2024-01-14T18:02:13.642415" level="INFO">Typing text 'Hier kunt u uw bericht invullen,Hier kunt u uw bericht invullen,' into text field 'id=message'.</msg>
+<status status="PASS" start="2024-01-14T18:02:13.641915" elapsed="0.321562"/>
+</kw>
+<status status="PASS" start="2024-01-14T18:02:12.963180" elapsed="1.000725"/>
+</kw>
+<kw name="Verzend Contact Formulier" owner="contact_page">
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>Send Message</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg time="2024-01-14T18:02:13.964470" level="INFO">Clicking button 'Send Message'.</msg>
+<status status="PASS" start="2024-01-14T18:02:13.963905" elapsed="0.118052"/>
+</kw>
+<kw name="Should Be String" owner="String">
+<arg>Your message has been sent.</arg>
+<doc>Fails if the given ``item`` is not a string.</doc>
+<status status="PASS" start="2024-01-14T18:02:14.081957" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-01-14T18:02:13.963905" elapsed="0.118052"/>
+</kw>
+<kw name="Sluit Website Einde Test" owner="common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-01-14T18:02:14.081957" elapsed="2.439791"/>
+</kw>
+<status status="PASS" start="2024-01-14T18:02:14.081957" elapsed="2.439791"/>
+</kw>
+<status status="PASS" start="2024-01-14T18:02:05.183058" elapsed="11.338690"/>
+</test>
+<doc>Front office test</doc>
+<status status="PASS" start="2024-01-14T18:02:04.704054" elapsed="11.817694"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Office">Office</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
